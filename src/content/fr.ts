@@ -93,7 +93,7 @@ export const fr: Dictionary = {
           category: "Produit personnel · B2C · Zero to One",
           description:
             "J'ai conçu et développé Twish de A à Z, en portant l'intégralité du parcours produit : recherche utilisateur, stratégie produit, UX/UI, développement assisté par IA, lancement, analytics et itération.",
-          image: "/images/case-studies/twish-hero.png",
+          image: "/images/case-studies/twish-home-hero.png",
           imageAlt: "Page d'accueil Twish avec le titre « Wish it. Twish it. » et une liste de souhaits universelle réunissant des produits de différentes boutiques",
         },
       ],

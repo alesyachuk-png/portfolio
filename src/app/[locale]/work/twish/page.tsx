@@ -8,7 +8,6 @@ import { twishAssets } from "@/content/assets";
 import { CSSection } from "@/components/casestudy/Section";
 import { FlowDiagram } from "@/components/casestudy/FlowDiagram";
 import { PillGroup } from "@/components/casestudy/PillGroup";
-import { MVPConverge } from "@/components/casestudy/MVPConverge";
 import { AssetPlaceholder } from "@/components/casestudy/AssetPlaceholder";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { CTAButton } from "@/components/Button";
@@ -48,6 +47,54 @@ function ExternalIcon({ className = "" }: { className?: string }) {
         strokeLinejoin="round"
       />
     </svg>
+  );
+}
+
+// Editorial replacement for "fragmented sources converge into one product":
+// plain typographic labels (no pills/buttons), hairline SVG paths standing in
+// for the literal arrows, and a minimal wireframe "wishlist artifact" instead
+// of a dark CTA-shaped target.
+function FragmentedSources({ fragments, target }: { fragments: string[]; target: string }) {
+  const indents = ["", "md:ml-8", "md:ml-2", "md:ml-10", "md:ml-4"];
+  return (
+    <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-[1fr_auto_auto] md:gap-6">
+      <Stagger className="flex flex-col gap-5 md:gap-7">
+        {fragments.map((f, i) => (
+          <StaggerItem
+            key={f}
+            className={`text-base font-medium text-ink/55 md:text-lg ${indents[i % indents.length]}`}
+          >
+            {f}
+          </StaggerItem>
+        ))}
+      </Stagger>
+
+      <svg viewBox="0 0 72 180" className="hidden h-44 w-20 md:block" preserveAspectRatio="none" aria-hidden>
+        {fragments.map((_, i) => {
+          const y = 14 + i * (152 / Math.max(fragments.length - 1, 1));
+          return (
+            <path key={i} d={`M0,${y} C36,${y} 36,90 72,90`} fill="none" stroke="#B7C7FB" strokeWidth="1" />
+          );
+        })}
+        <circle cx="72" cy="90" r="2.5" fill="#2954E5" />
+      </svg>
+
+      <Reveal
+        delay={0.1}
+        className="w-full max-w-[220px] justify-self-center rounded-xl border border-line/70 bg-white p-5 md:justify-self-start"
+      >
+        <p className="text-[11px] font-semibold uppercase tracking-wide text-accent">Twish</p>
+        <p className="mt-1 font-display text-base font-semibold leading-snug text-ink">{target}</p>
+        <div className="mt-4 flex flex-col gap-2.5">
+          {[0, 1, 2, 3].map((i) => (
+            <div key={i} className="flex items-center gap-2.5">
+              <span className="h-5 w-5 shrink-0 rounded-[4px] bg-paper-mist" aria-hidden />
+              <span className="h-1 flex-1 rounded-full bg-paper-mist" aria-hidden />
+            </div>
+          ))}
+        </div>
+      </Reveal>
+    </div>
   );
 }
 
@@ -205,17 +252,32 @@ export default function TwishPage({ params }: { params: { locale: string } }) {
       </section>
 
       {/* 01 — The problem */}
-      <CSSection eyebrow="01" heading={t.problem.heading} tone="white">
-        <div className="max-w-2xl space-y-4">
-          {t.problem.body.map((p, i) => (
-            <Reveal key={i} delay={i * 0.05}>
-              <p className="text-base leading-relaxed text-ink/70 md:text-lg">{p}</p>
+      <section className="bg-white py-16 md:py-24">
+        <div className="container-content grid grid-cols-1 gap-12 md:grid-cols-2 md:items-center md:gap-16">
+          <div className="flex flex-col gap-5">
+            <Reveal>
+              <p className="text-sm font-medium uppercase tracking-wide text-accent">01</p>
             </Reveal>
-          ))}
+            <Reveal delay={0.05}>
+              <h2 className="balance font-display text-2xl font-semibold leading-tight text-ink md:text-4xl">
+                {t.problem.heading}
+              </h2>
+            </Reveal>
+            <div className="flex flex-col gap-4">
+              {t.problem.body.map((p, i) => (
+                <Reveal key={i} delay={0.1 + i * 0.05}>
+                  <p className="text-base leading-relaxed text-ink/70 md:text-lg">{p}</p>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-8">
+            <Reveal className="text-sm font-medium text-ink/50">{t.problem.fragmentsIntro}</Reveal>
+            <FragmentedSources fragments={t.problem.fragments} target={t.problem.convergeTarget} />
+          </div>
         </div>
-        <Reveal className="max-w-xl text-sm font-medium text-ink/50">{t.problem.fragmentsIntro}</Reveal>
-        <MVPConverge metrics={t.problem.fragments} target={t.problem.convergeTarget} />
-      </CSSection>
+      </section>
 
       {/* 02 — Understanding the problem */}
       <CSSection eyebrow="02" heading={t.understanding.heading} tone="mist">

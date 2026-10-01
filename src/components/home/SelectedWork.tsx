@@ -14,7 +14,14 @@ const gridCols = {
   visualFirst: "lg:grid-cols-[1.15fr_0.85fr]",
 };
 
-function ProjectVisual({ image, imageAlt }: { image: string; imageAlt: string }) {
+function ProjectVisual({ image, imageAlt, slug }: { image: string; imageAlt: string; slug: string }) {
+  // Twish's homepage screenshot already matches the frame's 4:3 shape, so
+  // filling edge-to-edge (object-cover, anchored top) reads as crisp and
+  // prominent like the other projects' dense dashboard shots -- instead of
+  // floating with empty margins the way object-contain renders it. Only
+  // the bottom few percent of the source (below the required logo, nav,
+  // headline, and product objects) is ever cropped by this.
+  const isTwish = slug === "twish";
   return (
     <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-line bg-gradient-to-br from-paper-soft to-lavender/60 shadow-[0_14px_36px_-24px_rgba(11,18,32,0.2)] transition-all duration-500 ease-premium group-hover:-translate-y-1 group-hover:scale-[1.015] group-hover:shadow-[0_22px_48px_-20px_rgba(41,84,229,0.28)]">
       <div className="absolute inset-0 p-6 md:p-10">
@@ -23,7 +30,7 @@ function ProjectVisual({ image, imageAlt }: { image: string; imageAlt: string })
             src={image}
             alt={imageAlt}
             fill
-            className="object-contain"
+            className={isTwish ? "object-cover object-top" : "object-contain"}
             sizes="(min-width: 1024px) 620px, (min-width: 768px) 60vw, 100vw"
             quality={90}
           />
@@ -85,7 +92,7 @@ export function SelectedWork({ dict, locale }: { dict: Dictionary; locale: Local
                   </span>
                 </div>
                 <div className={`order-2 ${reversed ? "md:order-1" : "md:order-2"}`}>
-                  <ProjectVisual image={project.image} imageAlt={project.imageAlt} />
+                  <ProjectVisual image={project.image} imageAlt={project.imageAlt} slug={project.slug} />
                 </div>
               </Link>
             </Reveal>

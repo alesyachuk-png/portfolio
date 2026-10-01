@@ -93,7 +93,7 @@ export const en: Dictionary = {
           category: "Personal Product · B2C · Zero to One",
           description:
             "I designed and built Twish from the ground up, owning the full product journey from user research and product strategy to UX/UI, AI-assisted development, launch, analytics, and iteration.",
-          image: "/images/case-studies/twish-hero.png",
+          image: "/images/case-studies/twish-home-hero.png",
           imageAlt: "Twish homepage headline \"Wish it. Twish it.\" with a universal wishlist of products from different stores",
         },
       ],
