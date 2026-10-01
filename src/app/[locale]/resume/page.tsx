@@ -20,7 +20,6 @@ export default function ResumePage({ params }: { params: { locale: string } }) {
   const locale: Locale = params.locale;
   const dict = getDictionary(locale);
   const r = dict.resume;
-  const cvHref = locale === "fr" ? "/cv/alesia-korenchuk-cv-fr.pdf" : "/cv/alesia-korenchuk-cv-en.pdf";
 
   return (
     <section className="bg-paper-soft py-16 md:py-24">
@@ -36,9 +35,22 @@ export default function ResumePage({ params }: { params: { locale: string } }) {
             <p className="max-w-xl text-base leading-relaxed text-ink/65 md:text-lg">{r.intro}</p>
           </Reveal>
           <Reveal delay={0.15}>
-            <CTAButton href={cvHref} variant="primary" className="mt-2">
-              {r.downloadCta}
-            </CTAButton>
+            <div className="mt-2 flex flex-col gap-3 sm:flex-row">
+              <CTAButton
+                href="/cv/alesia-korenchuk-resume-en.pdf"
+                download="Alesia-Korenchuk-Product-Designer-Resume-EN.pdf"
+                variant="primary"
+              >
+                Download CV · English
+              </CTAButton>
+              <CTAButton
+                href="/cv/alesia-korenchuk-resume-fr.pdf"
+                download="Alesia-Korenchuk-Product-Designer-CV-FR.pdf"
+                variant="primary"
+              >
+                Télécharger le CV · Français
+              </CTAButton>
+            </div>
           </Reveal>
         </div>
 

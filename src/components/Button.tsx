@@ -17,14 +17,16 @@ export function CTAButton({
   children,
   variant = "primary",
   className = "",
+  download,
 }: {
   href: string;
   children: ReactNode;
   variant?: Variant;
   className?: string;
+  download?: string;
 }) {
   return (
-    <Link href={href} className={`${base} ${variants[variant]} ${className}`}>
+    <Link href={href} download={download} className={`${base} ${variants[variant]} ${className}`}>
       <span>{children}</span>
       <span
         aria-hidden
