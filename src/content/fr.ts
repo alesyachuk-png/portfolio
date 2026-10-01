@@ -1274,7 +1274,7 @@ export const fr: Dictionary = {
           whyLabel: "Pourquoi",
           why: "La surprise est au cœur de l'acte d'offrir. Une liste qui révèle le statut de réservation au propriétaire résout la coordination au prix de ce pour quoi on offre un cadeau.",
           resultLabel: "Résultat",
-          result: "Un seul modèle de données, deux vues — les doublons sont évités sans gâcher la surprise.",
+          result: "Un seul modèle de données, deux vues : les doublons sont évités sans gâcher la surprise.",
         },
         {
           title: "Retirer la friction du partage",
@@ -1284,7 +1284,7 @@ export const fr: Dictionary = {
           decisionLabel: "Décision",
           decision: "Rendre la liste partagée et le parcours de réservation invité entièrement utilisables sans compte.",
           whyLabel: "Pourquoi",
-          why: "Les personnes qui offrent ne sont pas l'utilisateur central du produit — elles aident quelqu'un d'autre. Chaque étape supplémentaire réduit la probabilité qu'elles aillent au bout.",
+          why: "Les personnes qui offrent ne sont pas l'utilisateur central du produit. Elles aident quelqu'un d'autre, et chaque étape supplémentaire réduit la probabilité qu'elles aillent au bout.",
           resultLabel: "Résultat",
           result: "Un lien partagé ouvre directement la liste. Aucune inscription n'est nécessaire pour réserver un cadeau.",
         },
@@ -1292,13 +1292,13 @@ export const fr: Dictionary = {
     },
     product: {
       heading: "Le produit",
-      intro: "Des parcours à un produit fonctionnel — le cœur du parcours, à travers les écrans qui comptent le plus.",
+      intro: "Des parcours à un produit fonctionnel : le cœur du parcours, à travers les écrans qui comptent le plus.",
     },
     builder: {
       heading: "Je ne me suis pas arrêtée au prototype.",
       body: [
         "Twish a élargi mon rôle au-delà du design produit traditionnel : construire, tester et lancer le produit réel grâce au développement assisté par IA.",
-        "J'ai traduit les exigences produit et les décisions UX en fonctionnalités réelles, testé l'implémentation directement, débogué les problèmes, et itéré — les décisions produit, l'architecture UX et le contrôle qualité restant de ma responsabilité tout au long du processus.",
+        "J'ai traduit les exigences produit et les décisions UX en fonctionnalités réelles, testé l'implémentation directement, débogué les problèmes, et itéré. Les décisions produit, l'architecture UX et le contrôle qualité sont restés de ma responsabilité tout au long du processus.",
       ],
       steps: ["Recherche", "Définir", "Concevoir", "Développer avec l'IA", "Tester", "Déployer", "Mesurer", "Itérer"],
       responsibilitiesLabel: "Ce que cela a demandé",

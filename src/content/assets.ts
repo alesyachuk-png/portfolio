@@ -140,7 +140,7 @@ export const twishAssets: Record<string, AssetSlot> = {
     aspect: "1460/832",
     formatLabel: { en: "Desktop screenshot", fr: "Capture desktop" },
     required: req,
-    title: { en: "Wishlist detail — owner view", fr: "Détail de la liste — vue propriétaire" },
+    title: { en: "Wishlist detail: owner view", fr: "Détail de la liste : vue propriétaire" },
     description: {
       en: "Real screenshot of the owner's wishlist with full edit controls (Add a wish, Share).",
       fr: "Capture réelle de la liste avec les contrôles d'édition du propriétaire (Ajouter un vœu, Partager).",
@@ -166,7 +166,7 @@ export const twishAssets: Record<string, AssetSlot> = {
     aspect: "1373/716",
     formatLabel: { en: "Desktop screenshot", fr: "Capture desktop" },
     required: req,
-    title: { en: "Wishlist detail — guest view", fr: "Détail de la liste — vue invité" },
+    title: { en: "Wishlist detail: guest view", fr: "Détail de la liste : vue invité" },
     description: {
       en: "Real screenshot of the same wishlist as a public guest sees it, with no edit controls.",
       fr: "Capture réelle de la même liste telle qu'un invité public la voit, sans contrôle d'édition.",

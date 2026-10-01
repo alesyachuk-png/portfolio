@@ -1275,7 +1275,7 @@ export const en: Dictionary = {
           whyLabel: "Why",
           why: "Surprise is core to gifting. A wishlist that leaks reservation status to the owner solves coordination at the cost of the thing gifting is for.",
           resultLabel: "Result",
-          result: "One data model, two views — duplicate gifts are avoided without the surprise being spoiled.",
+          result: "One data model, two views: duplicate gifts are avoided without the surprise being spoiled.",
         },
         {
           title: "Remove friction from sharing",
@@ -1285,7 +1285,7 @@ export const en: Dictionary = {
           decisionLabel: "Decision",
           decision: "Make the shared wishlist and guest reservation flow fully usable without an account.",
           whyLabel: "Why",
-          why: "Gift givers aren't the product's core user — they're helping someone else. Every extra step reduces the chance they complete it.",
+          why: "Gift givers aren't the product's core user. They're helping someone else, and every extra step reduces the chance they complete it.",
           resultLabel: "Result",
           result: "A shared link opens directly to the wishlist. No sign-up is needed to reserve a gift.",
         },
@@ -1293,13 +1293,13 @@ export const en: Dictionary = {
     },
     product: {
       heading: "The product",
-      intro: "From flows to a working product — the core journey, across the screens that matter most.",
+      intro: "From flows to a working product: the core journey, across the screens that matter most.",
     },
     builder: {
       heading: "I didn't stop at the prototype.",
       body: [
         "Twish expanded my role beyond traditional product design into building, testing, and shipping the actual product with AI-assisted development.",
-        "I translated product requirements and UX decisions into working features, tested implementation directly, debugged issues, and iterated — with product decisions, UX architecture, and quality control remaining my responsibility throughout.",
+        "I translated product requirements and UX decisions into working features, tested implementation directly, debugged issues, and iterated. Product decisions, UX architecture, and quality control remained my responsibility throughout.",
       ],
       steps: ["Research", "Define", "Design", "Build with AI", "Test", "Deploy", "Measure", "Iterate"],
       responsibilitiesLabel: "What this required",
