@@ -87,6 +87,15 @@ export const en: Dictionary = {
           image: "/images/case-studies/replicoo-hero.png",
           imageAlt: "Replicoo medical records card showing activity history, documents, health metrics, and medications",
         },
+        {
+          slug: "twish",
+          title: "Twish",
+          category: "Personal Product · B2C · Zero to One",
+          description:
+            "I designed and built Twish from the ground up, owning the full product journey from user research and product strategy to UX/UI, AI-assisted development, launch, analytics, and iteration.",
+          image: "/images/case-studies/twish-hero.png",
+          imageAlt: "Twish homepage headline \"Wish it. Twish it.\" with a universal wishlist of products from different stores",
+        },
       ],
     },
     howIWork: {
@@ -1133,5 +1142,239 @@ export const en: Dictionary = {
       ],
     },
     note: "This case study is intentionally shorter and will be expanded over time. As with all client and product work here, no user, funding, or clinical outcome data is claimed.",
+  },
+  twish: {
+    meta: {
+      eyebrow: "Personal Product · 0→1 · Live",
+      title: "Twish",
+      category: "Personal Product · B2C · Zero to One",
+      headline: "From an everyday problem to a real product.",
+      intro:
+        "I designed and built Twish, a universal wishlist that makes it easier to collect wishes, share them, and coordinate gifts without spoiling the surprise.",
+      heroImageAlt:
+        'Twish homepage headline "Wish it. Twish it." with a universal wishlist of products from different stores',
+    },
+    metaRow: {
+      role: "Product Designer · Product Owner · AI-Assisted Builder",
+      product: "B2C Web App",
+      scope: "Research · Product Strategy · UX/UI · Build · Launch · Analytics",
+      status: "Live product · Ongoing iteration",
+    },
+    statusLabel: "Status",
+    capabilities: ["Product Strategy", "User Research", "UX/UI", "AI-Assisted Development", "Analytics"],
+    liveCta: "Visit live product",
+    finalCta: "Explore Twish",
+    problem: {
+      heading: "It started with a very ordinary problem.",
+      body: [
+        "Gift ideas are often scattered across screenshots, messages, notes, and different online stores.",
+        "That makes a wishlist hard to maintain and hard to share, and it creates friction for the people trying to choose a gift.",
+        "Twish explores whether that fragmented experience could become one universal wishlist: collect wishes from anywhere, share one list, and coordinate gifts without ruining the surprise.",
+      ],
+      fragmentsIntro: "Before Twish, a single wishlist lived in pieces.",
+      fragments: ["Screenshots", "Product links", "Messages", "Notes", "Different stores"],
+      convergeTarget: "One wishlist, in Twish",
+    },
+    understanding: {
+      heading: "Understanding how people actually manage wishes and gifts.",
+      intro:
+        "The idea started with a very ordinary behaviour: gift ideas rarely live in one place. They get saved as screenshots, notes, messages and product links, then have to be found and shared again when a birthday or celebration comes around. I wanted to understand what would make that experience simpler for both sides: the person creating a wishlist and the person choosing a gift.",
+      personal: {
+        title: "Personal experience",
+        body: "Gift ideas were fragmented across screenshots, notes, messages and links from different stores. When it was time to share them, everything had to be collected again.",
+        question: "How could one wishlist collect products from anywhere and be shared through a single link?",
+      },
+      feedback: {
+        title: "Conversations & continuous feedback",
+        body: [
+          "I discussed the idea with my husband, friends and people around me who regularly buy gifts, use wishlists or simply exchange product links.",
+          "Once the MVP was live, I continued learning by giving people the real product and observing where they hesitated or became confused.",
+          "This wasn't a one-off research phase. Feedback continued alongside the product as I designed, shipped and iterated.",
+        ],
+      },
+      competitive: {
+        title: "Competitive exploration",
+        intro: "I looked at existing wishlist products to understand common patterns and where friction still existed.",
+        products: ["GiftList", "Giftster", "Elfster", "MyWishlist.online"],
+        dimensionsLabel: "I looked specifically at:",
+        dimensions: [
+          "Adding a product by pasting a URL",
+          "Automatic extraction of product name, image and price",
+          "Whether a browser extension is required",
+          "Reservation behaviour",
+          "The shared wishlist / guest experience",
+          "Adding products from different stores",
+          "Account requirements for basic actions",
+          "Wishlist import / migration",
+        ],
+      },
+      principlesHeading: "What this shaped",
+      principles: [
+        { title: "Universal", body: "Products shouldn't be tied to a single retailer." },
+        { title: "Low friction", body: "Adding a wish should take as little effort as possible." },
+        { title: "Easy to share", body: "One link should be enough to share a wishlist." },
+        { title: "Private when needed", body: "Different people don't always need access to the same information." },
+        {
+          title: "Surprise-safe",
+          body: "Reservation should help gift coordination without revealing the surprise to the wishlist owner.",
+        },
+      ],
+      opportunity:
+        "People may already have wishlists elsewhere and shouldn't necessarily have to recreate them manually. This later informed the idea of importing an existing wishlist by link.",
+    },
+    mvp: {
+      heading: "What was the smallest experience worth shipping?",
+      intro:
+        "I deliberately focused the first version on validating the core product behaviour instead of building every possible wishlist feature.",
+      journey: [
+        "Create wishlist",
+        "Add wishes",
+        "Share wishlist",
+        "Open as guest",
+        "Choose a gift",
+        "Reserve",
+        "Keep the surprise",
+      ],
+      includedLabel: "MVP",
+      included: ["Create wishlist", "Add wishes", "Share", "Guest access", "Reserve gifts", "Protect the surprise"],
+      laterLabel: "Later opportunities",
+      later: [
+        "Import existing wishlists",
+        "Delivery information",
+        "Friends",
+        "Price comparison",
+        "Affiliate features",
+        "Gamification",
+        "Additional discovery features",
+      ],
+    },
+    decisions: {
+      heading: "Key product decisions",
+      intro: "Three decisions that shaped the product, and why I made them.",
+      items: [
+        {
+          title: "Make adding a wish effortless",
+          problemLabel: "Problem",
+          problem: "Adding products manually creates unnecessary effort.",
+          decisionLabel: "Decision",
+          decision: "Support adding a wish by pasting a product link, while keeping manual entry available.",
+          whyLabel: "Why",
+          why: "Reduce friction at one of the most frequent actions in the product.",
+          resultLabel: "Result",
+          result:
+            "Paste a link, Twish takes care of the details: product information is fetched automatically and added to the wishlist.",
+        },
+        {
+          title: "One wishlist, two perspectives",
+          problemLabel: "Problem",
+          problem:
+            "The owner manages their wishlist but should not see who reserved a gift. Guests need to understand what's available and reserve a gift without revealing the surprise.",
+          decisionLabel: "Decision",
+          decision:
+            "Render the same wishlist item differently depending on who is viewing it: owners see their list exactly as they built it, guests see reservation status.",
+          whyLabel: "Why",
+          why: "Surprise is core to gifting. A wishlist that leaks reservation status to the owner solves coordination at the cost of the thing gifting is for.",
+          resultLabel: "Result",
+          result: "One data model, two views — duplicate gifts are avoided without the surprise being spoiled.",
+        },
+        {
+          title: "Remove friction from sharing",
+          problemLabel: "Problem",
+          problem:
+            "Asking a gift giver to create an account before they can view or reserve a gift adds friction at the exact moment they're trying to help.",
+          decisionLabel: "Decision",
+          decision: "Make the shared wishlist and guest reservation flow fully usable without an account.",
+          whyLabel: "Why",
+          why: "Gift givers aren't the product's core user — they're helping someone else. Every extra step reduces the chance they complete it.",
+          resultLabel: "Result",
+          result: "A shared link opens directly to the wishlist. No sign-up is needed to reserve a gift.",
+        },
+      ],
+    },
+    product: {
+      heading: "The product",
+      intro: "From flows to a working product — the core journey, across the screens that matter most.",
+    },
+    builder: {
+      heading: "I didn't stop at the prototype.",
+      body: [
+        "Twish expanded my role beyond traditional product design into building, testing, and shipping the actual product with AI-assisted development.",
+        "I translated product requirements and UX decisions into working features, tested implementation directly, debugged issues, and iterated — with product decisions, UX architecture, and quality control remaining my responsibility throughout.",
+      ],
+      steps: ["Research", "Define", "Design", "Build with AI", "Test", "Deploy", "Measure", "Iterate"],
+      responsibilitiesLabel: "What this required",
+      responsibilities: ["Product strategy", "UX/UI", "AI-assisted development", "QA", "Deployment", "Analytics"],
+    },
+    measure: {
+      heading: "Shipping was the beginning of the learning loop.",
+      intro:
+        "Once Twish was in people's hands, some problems became much easier to see than they had been in prototypes. Instead of redesigning the product all at once, I focused on the moments where people hesitated, got confused, or had to work harder than necessary.",
+      storyLabels: { observation: "Observation", hypothesis: "Hypothesis", change: "Change", learning: "Learning" },
+      stories: [
+        {
+          title: "Owner vs. guest experience",
+          observation:
+            "The biggest source of confusion was the shared wishlist experience. Owners and guests were using the same wishlist for very different reasons, but the distinction between those experiences wasn't always clear enough.",
+          hypothesis:
+            "Giving each role only the information and actions it needs would make the shared experience easier to understand and protect the surprise.",
+          change:
+            "I separated the owner and guest states more clearly. Owners manage their wishlist without seeing unnecessary reservation information, while guests can immediately understand what is available and what they can reserve.",
+          learning:
+            "A shared product doesn't always need a shared interface. Designing around what each person needs to know can make the overall experience simpler.",
+        },
+        {
+          title: "Friends & empty states",
+          observation:
+            'The Friends experience became confusing in empty or low-content states. "No friends yet" and "a friend hasn\'t shared anything yet" are different situations, but the interface didn\'t communicate that clearly enough.',
+          hypothesis: "Context-specific empty states would help people understand what was happening and what they could do next.",
+          change:
+            "I separated the empty states for Friends and individual friend pages, simplified the copy, and reduced unnecessary mobile UI. Search was also made more contextual so it didn't take up space when there were only a few friends.",
+          learning:
+            "Empty states are part of the product flow, not filler. They need to explain the current situation and make the next step obvious.",
+        },
+        {
+          title: "Mobile experience",
+          observation:
+            "On smaller screens, some UI elements were too large, pages required unnecessary scrolling, and back navigation wasn't always obvious.",
+          hypothesis:
+            "A more compact hierarchy and clearer mobile navigation would make the product feel lighter and easier to move through.",
+          change:
+            "I reduced heading sizes and spacing, made actions more compact, improved touch targets, clarified back navigation, and reworked the mobile hierarchy around the most important actions.",
+          learning: "Responsive design isn't just fitting desktop UI onto a smaller screen. The hierarchy itself often needs to change.",
+        },
+      ],
+      otherLabel: "Other improvements after launch",
+      other: [
+        {
+          title: "Add wish",
+          body: "Removed technical fields such as image URL. Images can now be uploaded, pasted from the clipboard, or added via drag and drop, with immediate preview.",
+        },
+        {
+          title: "Import",
+          body: "Simplified the wishlist import experience and made the flow easier to understand.",
+        },
+        {
+          title: "Reservation success",
+          body: "Replaced a purely technical confirmation with a warmer success state, and added a subtle opportunity for guests to create their own wishlist after reserving a gift.",
+        },
+      ],
+    },
+    reflection: {
+      heading: "What building Twish changed for me",
+      items: [
+        {
+          title: "Ownership",
+          body: "Design decisions feel different when you're responsible for what actually ships.",
+        },
+        {
+          title: "Shipping creates evidence",
+          body: "A real product answers questions prototypes can't.",
+        },
+        {
+          title: "AI changed my role",
+          body: "AI shortened the distance between design and implementation and allowed me to test ideas directly in a working product.",
+        },
+      ],
+    },
   },
 };

@@ -37,8 +37,8 @@ export default function ReplicooPage({ params }: { params: { locale: string } })
         backToWork: c.backToWork,
         nextProject: c.nextProject,
       }}
-      nextHref={`/${locale}/work/sprint-performance`}
-      nextTitle={dict.sprint.meta.title}
+      nextHref={`/${locale}/work/twish`}
+      nextTitle={dict.twish.meta.title}
     />
   );
 }

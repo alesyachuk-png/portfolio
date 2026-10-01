@@ -325,6 +325,99 @@ export interface SlaCaseStudy {
   };
 }
 
+export interface TwishDecisionStory {
+  title: string;
+  problemLabel: string;
+  problem: string;
+  decisionLabel: string;
+  decision: string;
+  whyLabel: string;
+  why: string;
+  resultLabel: string;
+  result: string;
+}
+
+export interface TwishCaseStudy {
+  meta: {
+    eyebrow: string;
+    title: string;
+    category: string;
+    headline: string;
+    intro: string;
+    heroImageAlt: string;
+  };
+  metaRow: {
+    role: string;
+    product: string;
+    scope: string;
+    status: string;
+  };
+  statusLabel: string;
+  capabilities: string[];
+  liveCta: string;
+  finalCta: string;
+  problem: {
+    heading: string;
+    body: string[];
+    fragmentsIntro: string;
+    fragments: string[];
+    convergeTarget: string;
+  };
+  understanding: {
+    heading: string;
+    intro: string;
+    personal: { title: string; body: string; question: string };
+    feedback: { title: string; body: string[] };
+    competitive: {
+      title: string;
+      intro: string;
+      products: string[];
+      dimensionsLabel: string;
+      dimensions: string[];
+    };
+    principlesHeading: string;
+    principles: { title: string; body: string }[];
+    opportunity: string;
+  };
+  mvp: {
+    heading: string;
+    intro: string;
+    journey: string[];
+    includedLabel: string;
+    included: string[];
+    laterLabel: string;
+    later: string[];
+  };
+  decisions: {
+    heading: string;
+    intro: string;
+    items: TwishDecisionStory[];
+  };
+  product: {
+    heading: string;
+    intro: string;
+  };
+  builder: {
+    heading: string;
+    body: string[];
+    steps: string[];
+    responsibilitiesLabel: string;
+    responsibilities: string[];
+  };
+  measure: {
+    heading: string;
+    intro: string;
+    storyLabels: { observation: string; hypothesis: string; change: string; learning: string };
+    stories: { title: string; observation: string; hypothesis: string; change: string; learning: string }[];
+    otherLabel: string;
+    other: { title: string; body: string }[];
+  };
+  reflection: {
+    heading: string;
+    items: { title: string; body: string }[];
+  };
+}
+
 export interface Dictionary {
   meta: {
     siteTitle: string;
@@ -496,4 +589,5 @@ export interface Dictionary {
   sprint: SprintCaseStudy;
   sla: SlaCaseStudy;
   replicoo: ShortCaseStudy;
+  twish: TwishCaseStudy;
 }

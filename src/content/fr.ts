@@ -87,6 +87,15 @@ export const fr: Dictionary = {
           image: "/images/case-studies/replicoo-hero.png",
           imageAlt: "Carte de dossier médical Replicoo montrant l'historique d'activité, les documents, les indicateurs de santé et les médicaments",
         },
+        {
+          slug: "twish",
+          title: "Twish",
+          category: "Produit personnel · B2C · Zero to One",
+          description:
+            "J'ai conçu et développé Twish de A à Z, en portant l'intégralité du parcours produit : recherche utilisateur, stratégie produit, UX/UI, développement assisté par IA, lancement, analytics et itération.",
+          image: "/images/case-studies/twish-hero.png",
+          imageAlt: "Page d'accueil Twish avec le titre « Wish it. Twish it. » et une liste de souhaits universelle réunissant des produits de différentes boutiques",
+        },
       ],
     },
     howIWork: {
@@ -1132,5 +1141,241 @@ export const fr: Dictionary = {
       ],
     },
     note: "Cette étude de cas est volontairement plus courte et sera enrichie au fil du temps. Comme pour tous les projets présentés ici, aucune donnée d'utilisateurs, de financement ou de résultat clinique n'est avancée.",
+  },
+  twish: {
+    meta: {
+      eyebrow: "Produit personnel · 0→1 · En ligne",
+      title: "Twish",
+      category: "Produit personnel · B2C · Zero to One",
+      headline: "D'un problème du quotidien à un vrai produit.",
+      intro:
+        "J'ai conçu et développé Twish, une liste de souhaits universelle qui facilite la collecte de souhaits, leur partage, et la coordination des cadeaux sans gâcher la surprise.",
+      heroImageAlt:
+        "Page d'accueil Twish avec le titre « Wish it. Twish it. » et une liste de souhaits universelle réunissant des produits de différentes boutiques",
+    },
+    metaRow: {
+      role: "Product Designer · Product Owner · Développement assisté par IA",
+      product: "Application web B2C",
+      scope: "Recherche · Stratégie produit · UX/UI · Développement · Lancement · Analytics",
+      status: "Produit en ligne · Itération continue",
+    },
+    statusLabel: "Statut",
+    capabilities: ["Stratégie produit", "Recherche utilisateur", "UX/UI", "Développement assisté par IA", "Analytics"],
+    liveCta: "Voir le produit en ligne",
+    finalCta: "Découvrir Twish",
+    problem: {
+      heading: "Tout est parti d'un problème très ordinaire.",
+      body: [
+        "Les idées de cadeaux sont souvent éparpillées entre captures d'écran, messages, notes et différentes boutiques en ligne.",
+        "Cela rend une liste de souhaits difficile à maintenir et difficile à partager, et crée de la friction pour les proches qui cherchent à choisir un cadeau.",
+        "Twish explore si cette expérience fragmentée peut devenir une seule liste universelle : rassembler des souhaits de partout, partager une seule liste, et coordonner les cadeaux sans gâcher la surprise.",
+      ],
+      fragmentsIntro: "Avant Twish, une liste de souhaits vivait en morceaux épars.",
+      fragments: ["Captures d'écran", "Liens produits", "Messages", "Notes", "Différentes boutiques"],
+      convergeTarget: "Une seule liste, dans Twish",
+    },
+    understanding: {
+      heading: "Comprendre comment les gens gèrent vraiment leurs souhaits et leurs cadeaux.",
+      intro:
+        "L'idée est partie d'un comportement très ordinaire : les idées de cadeaux ne vivent presque jamais à un seul endroit. Elles sont enregistrées sous forme de captures d'écran, de notes, de messages et de liens produits, puis il faut tout retrouver et repartager au moment d'un anniversaire ou d'une célébration. Je voulais comprendre ce qui rendrait cette expérience plus simple des deux côtés : la personne qui crée une liste, et celle qui choisit un cadeau.",
+      personal: {
+        title: "Expérience personnelle",
+        body: "Les idées de cadeaux étaient éparpillées entre captures d'écran, notes, messages et liens de différentes boutiques. Au moment de les partager, il fallait tout rassembler à nouveau.",
+        question: "Comment une seule liste pourrait-elle rassembler des produits de n'importe où et se partager via un seul lien ?",
+      },
+      feedback: {
+        title: "Discussions et retours continus",
+        body: [
+          "J'ai discuté de l'idée avec mon mari, des amis et des proches qui achètent régulièrement des cadeaux, utilisent des listes de souhaits ou échangent simplement des liens produits.",
+          "Une fois le MVP en ligne, j'ai continué à apprendre en donnant le vrai produit à des gens et en observant où ils hésitaient ou se sentaient perdus.",
+          "Ce n'était pas une phase de recherche ponctuelle. Les retours se sont poursuivis en parallèle du produit, au fil de la conception, du lancement et de l'itération.",
+        ],
+      },
+      competitive: {
+        title: "Exploration concurrentielle",
+        intro: "J'ai étudié des produits de liste de souhaits existants pour comprendre les patterns courants et les points de friction qui subsistaient.",
+        products: ["GiftList", "Giftster", "Elfster", "MyWishlist.online"],
+        dimensionsLabel: "J'ai notamment regardé :",
+        dimensions: [
+          "L'ajout d'un produit en collant une URL",
+          "L'extraction automatique du nom, de l'image et du prix du produit",
+          "La nécessité ou non d'une extension de navigateur",
+          "Le comportement de réservation",
+          "L'expérience de liste partagée / invité",
+          "L'ajout de produits de différentes boutiques",
+          "Les exigences de compte pour les actions de base",
+          "L'import / la migration de liste",
+        ],
+      },
+      principlesHeading: "Ce que cela a façonné",
+      principles: [
+        { title: "Universel", body: "Les produits ne devraient pas être liés à une seule boutique." },
+        { title: "Faible friction", body: "Ajouter un souhait devrait demander le moins d'effort possible." },
+        { title: "Facile à partager", body: "Un seul lien devrait suffire pour partager une liste." },
+        { title: "Privé quand nécessaire", body: "Tout le monde n'a pas besoin d'accéder aux mêmes informations." },
+        {
+          title: "Préserve la surprise",
+          body: "La réservation doit faciliter la coordination des cadeaux sans révéler la surprise au propriétaire de la liste.",
+        },
+      ],
+      opportunity:
+        "Certaines personnes ont peut-être déjà des listes ailleurs et ne devraient pas forcément avoir à les recréer manuellement. Cela a inspiré par la suite l'idée d'importer une liste existante via un lien.",
+    },
+    mvp: {
+      heading: "Quelle était la plus petite expérience qui valait la peine d'être lancée ?",
+      intro:
+        "J'ai délibérément concentré la première version sur la validation du comportement produit essentiel, plutôt que de construire toutes les fonctionnalités possibles d'une liste de souhaits.",
+      journey: [
+        "Créer une liste",
+        "Ajouter des souhaits",
+        "Partager la liste",
+        "Ouvrir en tant qu'invité",
+        "Choisir un cadeau",
+        "Réserver",
+        "Garder la surprise",
+      ],
+      includedLabel: "MVP",
+      included: ["Créer une liste", "Ajouter des souhaits", "Partager", "Accès invité", "Réserver des cadeaux", "Protéger la surprise"],
+      laterLabel: "Opportunités futures",
+      later: [
+        "Importer des listes existantes",
+        "Informations de livraison",
+        "Amis",
+        "Comparaison de prix",
+        "Fonctionnalités d'affiliation",
+        "Gamification",
+        "Fonctionnalités de découverte supplémentaires",
+      ],
+    },
+    decisions: {
+      heading: "Décisions produit clés",
+      intro: "Trois décisions qui ont façonné le produit, et les raisons derrière elles.",
+      items: [
+        {
+          title: "Rendre l'ajout d'un souhait sans effort",
+          problemLabel: "Problème",
+          problem: "Saisir manuellement les informations d'un produit crée un effort inutile.",
+          decisionLabel: "Décision",
+          decision: "Permettre d'ajouter un souhait en collant un lien produit, tout en gardant la saisie manuelle disponible.",
+          whyLabel: "Pourquoi",
+          why: "Réduire la friction sur l'une des actions les plus fréquentes du produit.",
+          resultLabel: "Résultat",
+          result:
+            "On colle un lien, Twish s'occupe des détails : les informations du produit sont récupérées automatiquement et ajoutées à la liste.",
+        },
+        {
+          title: "Une liste, deux perspectives",
+          problemLabel: "Problème",
+          problem:
+            "Le propriétaire gère sa liste mais ne doit pas voir qui a réservé un cadeau. Les invités doivent comprendre ce qui est disponible et réserver un cadeau sans révéler la surprise.",
+          decisionLabel: "Décision",
+          decision:
+            "Afficher le même élément de la liste différemment selon qui le consulte : le propriétaire voit sa liste exactement telle qu'il l'a construite, les invités voient le statut de réservation.",
+          whyLabel: "Pourquoi",
+          why: "La surprise est au cœur de l'acte d'offrir. Une liste qui révèle le statut de réservation au propriétaire résout la coordination au prix de ce pour quoi on offre un cadeau.",
+          resultLabel: "Résultat",
+          result: "Un seul modèle de données, deux vues — les doublons sont évités sans gâcher la surprise.",
+        },
+        {
+          title: "Retirer la friction du partage",
+          problemLabel: "Problème",
+          problem:
+            "Demander à une personne qui offre de créer un compte avant de pouvoir consulter ou réserver un cadeau ajoute de la friction au moment précis où elle essaie d'aider.",
+          decisionLabel: "Décision",
+          decision: "Rendre la liste partagée et le parcours de réservation invité entièrement utilisables sans compte.",
+          whyLabel: "Pourquoi",
+          why: "Les personnes qui offrent ne sont pas l'utilisateur central du produit — elles aident quelqu'un d'autre. Chaque étape supplémentaire réduit la probabilité qu'elles aillent au bout.",
+          resultLabel: "Résultat",
+          result: "Un lien partagé ouvre directement la liste. Aucune inscription n'est nécessaire pour réserver un cadeau.",
+        },
+      ],
+    },
+    product: {
+      heading: "Le produit",
+      intro: "Des parcours à un produit fonctionnel — le cœur du parcours, à travers les écrans qui comptent le plus.",
+    },
+    builder: {
+      heading: "Je ne me suis pas arrêtée au prototype.",
+      body: [
+        "Twish a élargi mon rôle au-delà du design produit traditionnel : construire, tester et lancer le produit réel grâce au développement assisté par IA.",
+        "J'ai traduit les exigences produit et les décisions UX en fonctionnalités réelles, testé l'implémentation directement, débogué les problèmes, et itéré — les décisions produit, l'architecture UX et le contrôle qualité restant de ma responsabilité tout au long du processus.",
+      ],
+      steps: ["Recherche", "Définir", "Concevoir", "Développer avec l'IA", "Tester", "Déployer", "Mesurer", "Itérer"],
+      responsibilitiesLabel: "Ce que cela a demandé",
+      responsibilities: ["Stratégie produit", "UX/UI", "Développement assisté par IA", "QA", "Déploiement", "Analytics"],
+    },
+    measure: {
+      heading: "Le lancement n'était que le début de la boucle d'apprentissage.",
+      intro:
+        "Une fois Twish entre les mains des utilisateurs, certains problèmes sont devenus bien plus visibles qu'ils ne l'étaient dans les prototypes. Plutôt que de tout repenser d'un coup, je me suis concentrée sur les moments où les gens hésitaient, se sentaient perdus, ou devaient fournir plus d'effort que nécessaire.",
+      storyLabels: { observation: "Observation", hypothesis: "Hypothèse", change: "Changement", learning: "Apprentissage" },
+      stories: [
+        {
+          title: "Expérience propriétaire vs invité",
+          observation:
+            "La principale source de confusion venait de l'expérience de liste partagée. Les propriétaires et les invités utilisaient la même liste pour des raisons très différentes, mais la distinction entre ces deux expériences n'était pas toujours assez claire.",
+          hypothesis:
+            "Donner à chaque rôle uniquement les informations et les actions dont il a besoin rendrait l'expérience partagée plus facile à comprendre et préserverait la surprise.",
+          change:
+            "J'ai séparé plus nettement les états propriétaire et invité. Les propriétaires gèrent leur liste sans voir d'informations de réservation inutiles, tandis que les invités comprennent immédiatement ce qui est disponible et ce qu'ils peuvent réserver.",
+          learning:
+            "Un produit partagé n'a pas toujours besoin d'une interface partagée. Concevoir autour de ce que chaque personne a besoin de savoir peut simplifier l'ensemble de l'expérience.",
+        },
+        {
+          title: "Amis et états vides",
+          observation:
+            "L'expérience « Amis » devenait confuse dans les états vides ou peu remplis. « Pas encore d'amis » et « un ami n'a encore rien partagé » sont deux situations différentes, mais l'interface ne le communiquait pas assez clairement.",
+          hypothesis:
+            "Des états vides contextuels aideraient les gens à comprendre la situation et ce qu'ils pouvaient faire ensuite.",
+          change:
+            "J'ai séparé les états vides de la page Amis et des pages d'ami individuelles, simplifié le texte, et réduit l'interface mobile superflue. La recherche a aussi été rendue plus contextuelle pour ne pas prendre de place quand il n'y avait que peu d'amis.",
+          learning:
+            "Les états vides font partie du parcours produit, ce ne sont pas du remplissage. Ils doivent expliquer la situation actuelle et rendre la prochaine étape évidente.",
+        },
+        {
+          title: "Expérience mobile",
+          observation:
+            "Sur les petits écrans, certains éléments d'interface étaient trop grands, certaines pages demandaient un défilement inutile, et le retour en arrière n'était pas toujours évident.",
+          hypothesis:
+            "Une hiérarchie plus compacte et une navigation mobile plus claire rendraient le produit plus léger et plus facile à parcourir.",
+          change:
+            "J'ai réduit la taille des titres et les espacements, rendu les actions plus compactes, amélioré les zones tactiles, clarifié la navigation retour, et repensé la hiérarchie mobile autour des actions les plus importantes.",
+          learning:
+            "Le design responsive ne consiste pas seulement à faire tenir une interface desktop sur un petit écran. C'est souvent la hiérarchie elle-même qui doit changer.",
+        },
+      ],
+      otherLabel: "Autres améliorations après le lancement",
+      other: [
+        {
+          title: "Ajouter un vœu",
+          body: "Suppression des champs techniques comme l'URL d'image. Les images peuvent désormais être téléversées, collées depuis le presse-papiers, ou glissées-déposées, avec un aperçu immédiat.",
+        },
+        {
+          title: "Import",
+          body: "Simplification de l'expérience d'import de liste pour rendre le parcours plus facile à comprendre.",
+        },
+        {
+          title: "Confirmation de réservation",
+          body: "Remplacement d'une confirmation purement technique par un état de succès plus chaleureux, avec une invitation discrète pour l'invité à créer sa propre liste après avoir réservé un cadeau.",
+        },
+      ],
+    },
+    reflection: {
+      heading: "Ce que construire Twish a changé pour moi",
+      items: [
+        {
+          title: "La responsabilité",
+          body: "Les décisions de design se vivent différemment quand on est responsable de ce qui est réellement livré.",
+        },
+        {
+          title: "Lancer un produit crée des preuves",
+          body: "Un vrai produit répond à des questions que les prototypes ne peuvent pas résoudre.",
+        },
+        {
+          title: "L'IA a changé mon rôle",
+          body: "L'IA a raccourci la distance entre le design et l'implémentation, et m'a permis de tester des idées directement dans un produit fonctionnel.",
+        },
+      ],
+    },
   },
 };

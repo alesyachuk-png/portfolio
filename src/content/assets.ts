@@ -82,6 +82,126 @@ export const replicooAssets: Record<string, AssetSlot> = {
   },
 };
 
+export const twishAssets: Record<string, AssetSlot> = {
+  hero: {
+    key: "twish-hero",
+    aspect: "4/3",
+    formatLabel: { en: "Desktop screenshot", fr: "Capture desktop" },
+    required: req,
+    title: { en: "Twish homepage", fr: "Page d'accueil Twish" },
+    description: {
+      en: "Real screenshot captured from the live twishnow.com homepage.",
+      fr: "Capture réelle de la page d'accueil de twishnow.com.",
+    },
+    recreatable: false,
+    src: "/images/case-studies/twish-hero.png",
+  },
+  addViaLink: {
+    key: "twish-add-link",
+    aspect: "4/3",
+    formatLabel: { en: "Desktop screenshot", fr: "Capture desktop" },
+    required: req,
+    title: { en: "Add a wish by pasting a link", fr: "Ajouter un vœu en collant un lien" },
+    description: {
+      en: "Real screenshot captured from the public twishnow.com marketing page.",
+      fr: "Capture réelle de la page publique de twishnow.com.",
+    },
+    recreatable: false,
+    src: "/images/case-studies/twish-add-link.png",
+  },
+  shareReserve: {
+    key: "twish-share-reserve",
+    aspect: "4/3",
+    formatLabel: { en: "Desktop screenshot", fr: "Capture desktop" },
+    required: req,
+    title: { en: "Share once, gift better", fr: "Partager une fois, mieux offrir" },
+    description: {
+      en: "Real screenshot captured from the public twishnow.com marketing page.",
+      fr: "Capture réelle de la page publique de twishnow.com.",
+    },
+    recreatable: false,
+    src: "/images/case-studies/twish-share-reserve.png",
+  },
+  myWishlists: {
+    key: "twish-my-wishlists",
+    aspect: "2000/620",
+    formatLabel: { en: "Desktop screenshot", fr: "Capture desktop" },
+    required: req,
+    title: { en: "My Wishlists desktop screen", fr: "Écran « Mes listes » (desktop)" },
+    description: {
+      en: "Real screenshot of the signed-in overview where the owner sees and manages all their wishlists.",
+      fr: "Capture réelle de la vue d'ensemble connectée où le propriétaire voit et gère toutes ses listes.",
+    },
+    recreatable: false,
+    src: "/images/case-studies/twish-my-wishlists.png",
+  },
+  wishlistOwnerView: {
+    key: "twish-wishlist-owner-view",
+    aspect: "1460/832",
+    formatLabel: { en: "Desktop screenshot", fr: "Capture desktop" },
+    required: req,
+    title: { en: "Wishlist detail — owner view", fr: "Détail de la liste — vue propriétaire" },
+    description: {
+      en: "Real screenshot of the owner's wishlist with full edit controls (Add a wish, Share).",
+      fr: "Capture réelle de la liste avec les contrôles d'édition du propriétaire (Ajouter un vœu, Partager).",
+    },
+    recreatable: false,
+    src: "/images/case-studies/twish-wishlist-owner-view.png",
+  },
+  addWish: {
+    key: "twish-add-wish",
+    aspect: "1460/1000",
+    formatLabel: { en: "Desktop screenshot", fr: "Capture desktop" },
+    required: req,
+    title: { en: "Add a wish modal", fr: "Fenêtre « Ajouter un vœu »" },
+    description: {
+      en: "Real screenshot of the add-a-wish modal inside the owner's wishlist.",
+      fr: "Capture réelle de la fenêtre d'ajout d'un vœu dans la liste du propriétaire.",
+    },
+    recreatable: false,
+    src: "/images/case-studies/twish-add-wish.png",
+  },
+  wishlistGuestView: {
+    key: "twish-wishlist-guest-view",
+    aspect: "1373/716",
+    formatLabel: { en: "Desktop screenshot", fr: "Capture desktop" },
+    required: req,
+    title: { en: "Wishlist detail — guest view", fr: "Détail de la liste — vue invité" },
+    description: {
+      en: "Real screenshot of the same wishlist as a public guest sees it, with no edit controls.",
+      fr: "Capture réelle de la même liste telle qu'un invité public la voit, sans contrôle d'édition.",
+    },
+    recreatable: false,
+    src: "/images/case-studies/twish-wishlist-guest-view.png",
+  },
+  reservationFlow: {
+    key: "twish-reservation-flow",
+    aspect: "2000/1050",
+    formatLabel: { en: "Desktop screenshot", fr: "Capture desktop" },
+    required: req,
+    title: { en: "Reservation flow", fr: "Parcours de réservation" },
+    description: {
+      en: "Real screenshot of a wish's detail page, showing the guest reservation action.",
+      fr: "Capture réelle de la page détail d'un vœu, montrant l'action de réservation pour l'invité.",
+    },
+    recreatable: false,
+    src: "/images/case-studies/twish-reservation-flow.png",
+  },
+  mobileWishlist: {
+    key: "twish-mobile-wishlist",
+    aspect: "780/1366",
+    formatLabel: { en: "Mobile screenshot", fr: "Capture mobile" },
+    required: req,
+    title: { en: "Mobile wishlist screen", fr: "Écran mobile de la liste" },
+    description: {
+      en: "Real screenshot of the owner's wishlist on a phone.",
+      fr: "Capture réelle de la liste du propriétaire sur mobile.",
+    },
+    recreatable: false,
+    src: "/images/case-studies/twish-mobile-wishlist.png",
+  },
+};
+
 export const designSystemAssets: Record<string, AssetSlot> = {
   componentLibrary: {
     key: "ds-component-library",

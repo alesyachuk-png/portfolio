@@ -2,7 +2,15 @@ import type { MetadataRoute } from "next";
 import { locales } from "@/lib/i18n";
 import { siteConfig } from "@/lib/config";
 
-const routes = ["", "/about", "/resume", "/work/sprint-performance", "/work/sla-management", "/work/replicoo"];
+const routes = [
+  "",
+  "/about",
+  "/resume",
+  "/work/sprint-performance",
+  "/work/sla-management",
+  "/work/replicoo",
+  "/work/twish",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
